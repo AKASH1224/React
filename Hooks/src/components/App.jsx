@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+  useEffect(()=>{
+    console.log("this is count",count)
 
+  },[count])
   function increase() {
     setCount(count + 1);
   }
